@@ -10,15 +10,14 @@ import java.util.Scanner;
  */
 public class WaitAndNotify {
 	
-	private static boolean isNotify = false;
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		Object LOCK = new Object();
 		new Thread() {
 			@Override
 			public void run() {
-				int flag = 0;
 				int times = 0;
 				while(true) {
 					/*
@@ -43,7 +42,6 @@ public class WaitAndNotify {
 						}
 						String instruct = scanner.next();
 						if(instruct.equals("wait")) {
-							flag = 1;
 							try {
 								System.out.println("T1 FRONT PART");
 								LOCK.wait();

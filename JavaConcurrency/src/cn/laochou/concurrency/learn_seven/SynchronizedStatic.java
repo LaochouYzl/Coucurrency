@@ -3,6 +3,8 @@ package cn.laochou.concurrency.learn_seven;
  * @author:Laochou
  * @date 2019年3月8日 下午9:58:35
  * @version 1.0
+ * if you use the synchronized to decorate the static method, the monitor is the class
+ * if you use the synchronized to decorate the method of object , the monitor is the object
  */
 public class SynchronizedStatic {
 	
